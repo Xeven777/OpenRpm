@@ -1,0 +1,87 @@
+const TRANSLATIONS = {
+    en: {
+        app_title: "Raven's Test",
+        site_title: "Open RPM",
+        app_subtitle: "Raven's Progressive Matrices (RPM)",
+        instructions_title: "Instruction:",
+        instructions_text: "You will be offered 60 tasks (5 series). Find the logical pattern and select the missing piece.",
+        time_text: "Time: 20 minutes.",
+        age_label: "Age:",
+
+        age_14_15: "14 – 15 years",
+        age_16_17: "16 – 17 years",
+        age_18_30: "18 – 30 years",
+        age_31_35: "31 – 35 years",
+        age_36_40: "36 – 40 years",
+        age_41_45: "41 – 45 years",
+        age_46_50: "46 – 50 years",
+        age_51_55: "51 – 55 years",
+        age_56_plus: "56 – 60+ years",
+
+        start_btn: "Start",
+
+        result_age_label: "Age",
+
+        wiki_url: "https://en.wikipedia.org/wiki/2026",
+
+        progress_template: "Question {q} of 60 (Series {s})",
+        btn_prev: "Back",
+        btn_end: "End",
+        btn_next: "Next",
+        btn_finish: "Finish",
+        series_label: "Series",
+
+        modal_title: "End?",
+        modal_msg: "End early? Progress will be lost.",
+        modal_cancel: "Cancel",
+        modal_confirm: "Yes",
+
+        results_title: "Results",
+        result_label: "RESULT",
+        interpretation_label: "INTERPRETATION",
+        analysis_label: "ANALYSIS & ADVICE",
+        total_score_label: "Score",
+        time_taken_label: "Time",
+        th_series: "Series",
+        th_correct: "Correct",
+        th_deviation: "Deviation",
+        return_btn: "Retake",
+        share_btn: "Share",
+        download_btn: "Download PDF",
+        series_profile_label: "Series Profile",
+        bell_label: "Where you stand",
+        percentile_label: "Percentile",
+        keyboard_hint: "Tip: press 1–8 to answer, ← → to navigate",
+        resume_title: "Resume test?",
+        resume_msg: "You have an unfinished test. Continue where you left off?",
+        resume_yes: "Resume",
+        resume_no: "Start over",
+
+        reliability_good: "Reliable result.",
+        reliability_unreliable: "Significant deviations across series. Results may be unreliable.",
+        reliability_defect: "Significant deviation in Series A. Possible attention deficit.",
+        reliability_low_reliability: "Low score. Low indicators are considered less reliable.",
+
+        diag_exceptional: "Very Superior",
+        diag_high: "High Average — Superior Range",
+        diag_above_avg: "Above Average",
+        diag_avg: "Average Range",
+        diag_below_avg: "Low Average",
+        diag_low: "Below Average — may benefit from practice",
+        diag_mild: "Well Below Average",
+        diag_moderate: "Well Below Average",
+        diag_severe: "Well Below Average",
+
+        degree_1: "Percentile 95+: Very Superior — top 5%. Strong abstract reasoning.",
+        degree_2: "Percentile 75–95: Above Average to Superior — strong problem-solving.",
+        degree_3: "Percentile 25–74: Average Range — typical for most adults.",
+        degree_4: "Percentile 5–24: Low Average — concrete tasks may feel easier than abstract patterns.",
+        degree_5: "Percentile <5: Well Below Average — consider retesting when rested and focused.",
+
+        rec_120: "Exceptional potential. You excel at pattern recognition. Engage in strategy, math, or architecture. Challenges satisfy you.",
+        rec_110: "Above average abilities. You process info quickly. Try learning languages, coding, or chess. Suited for analytical roles.",
+        rec_90: "Average intelligence. You can learn any skill with practice. Regular practice, reading, and puzzles keep the mind sharp. Solid foundation for any career.",
+        rec_80: "Slightly below average. Abstract concepts may be hard; practical tasks easier. Brain exercises (Sudoku) can help improve speed.",
+        rec_low: "Difficulty with patterns. Doesn't define your worth. Focus on hands-on tasks. Consult a specialist for tailored cognitive training."
+    }
+};
