@@ -19,6 +19,14 @@
 
     <div class="container">
 
+        <select id="lang-select-fixed" onchange="app.changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="zh">中文</option>
+            <option value="es">Español</option>
+            <option value="hi">हिन्दी</option>
+            <option value="fr">Français</option>
+        </select>
+
         <div id="intro-screen">
             <h1 data-i18n="app_title"></h1>
             <h3 data-i18n="app_subtitle"></h3>
@@ -65,9 +73,17 @@
                 </div>
 
                 <div class="nav-controls">
-                    <button class="btn" id="btn-prev" onclick="app.prevQuestion()" data-i18n="btn_prev"></button>
-                    <button class="btn btn-cancel" onclick="app.confirmEndTest()" data-i18n="btn_end"></button>
-                    <button class="btn" id="btn-next" onclick="app.nextQuestion()" data-i18n="btn_next"></button>
+                    <button class="btn" id="btn-prev" onclick="app.prevQuestion()" aria-label="Previous">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                        <span data-i18n="btn_prev"></span>
+                    </button>
+                    <button class="btn btn-cancel btn-end-warning" onclick="app.confirmEndTest()" aria-label="End test">
+                        <span data-i18n="btn_end"></span>
+                    </button>
+                    <button class="btn" id="btn-next" onclick="app.nextQuestion()" aria-label="Next">
+                        <span data-i18n="btn_next"></span>
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
                 </div>
             </div>
         </div>

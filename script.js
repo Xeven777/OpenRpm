@@ -280,7 +280,13 @@
         }
 
         determineLanguage() {
-            this.currentLang = 'en';
+            const savedLang = localStorage.getItem('raven_lang');
+            if (savedLang && TRANSLATIONS[savedLang]) {
+                this.currentLang = savedLang;
+            } else {
+                this.currentLang = 'en';
+            }
+            this.updateLangSelect();
         }
 
         t(key) {
@@ -298,8 +304,22 @@
         }
 
         changeLanguage(lang) {
-            // single language (en) - no-op kept for compatibility
-            this.currentLang = 'en';
+            if (TRANSLATIONS[lang] && lang !== this.currentLang) {
+                this.currentLang = lang;
+                localStorage.setItem('raven_lang', lang);
+                this.applyTranslations();
+                this.updateMetaTitle();
+                this.updateWikiLink();
+                this.updateLangSelect();
+                document.documentElement.lang = lang;
+            }
+        }
+
+        updateLangSelect() {
+            const select = document.getElementById('lang-select-fixed');
+            if (select) {
+                select.value = this.currentLang;
+            }
         }
 
         applyTranslations() {
@@ -482,11 +502,14 @@
                 this.dom.options.appendChild(btn);
             }
             this.dom.prevBtn.disabled = q === 1;
+            const nextBtnSpan = this.dom.nextBtn.querySelector('span');
             if (q === 60) {
-                this.dom.nextBtn.innerText = this.t('btn_finish');
+                if (nextBtnSpan) nextBtnSpan.innerText = this.t('btn_finish');
+                else this.dom.nextBtn.innerText = this.t('btn_finish');
                 this.dom.nextBtn.classList.add('btn-finish');
             } else {
-                this.dom.nextBtn.innerText = this.t('btn_next');
+                if (nextBtnSpan) nextBtnSpan.innerText = this.t('btn_next');
+                else this.dom.nextBtn.innerText = this.t('btn_next');
                 this.dom.nextBtn.classList.remove('btn-finish');
             }
         }
